@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "tensorflow-quicksheet"
+version = "0.1.0"
+description = ""
+authors = ["jirathip-k <115384744+jirathip-k@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11, <3.12"
+numpy = "^1.26.1"
+tensorflow-macos = "^2.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+main = "tensorflow_quicksheet:wrapper"
