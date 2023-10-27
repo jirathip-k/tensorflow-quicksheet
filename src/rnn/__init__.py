@@ -3,7 +3,7 @@ import os
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 import tensorflow as tf
 
-from .rnn import RNN
+from .model import RNN
 from typing import cast
 import argparse
 

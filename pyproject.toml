@@ -7,7 +7,8 @@ readme = "README.md"
 packages = [
     { include = "rnn", from = "src" },
     { include = "transformer", from = "src" },
-    { include = "vae", from = "src" }
+    { include = "vae", from = "src" },
+    { include = "wordvec", from = "src" },
 ]
 
 [tool.poetry.dependencies]
@@ -23,3 +24,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 rnn = "src.rnn:main"
 vae = "src.vae:main"
+wordvec = "src.wordvec:main"
+train_wordvec = "src.wordvec.train:main"
+
