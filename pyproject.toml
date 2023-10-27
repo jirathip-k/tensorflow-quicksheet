@@ -4,16 +4,22 @@ version = "0.1.0"
 description = ""
 authors = ["jirathip-k <115384744+jirathip-k@users.noreply.github.com>"]
 readme = "README.md"
+packages = [
+    { include = "rnn", from = "src" },
+    { include = "transformer", from = "src" },
+    { include = "vae", from = "src" }
+]
 
 [tool.poetry.dependencies]
-python = ">=3.11, <3.12"
+python = ">=3.10, <3.12"
 numpy = "^1.26.1"
-tensorflow-macos = "^2.14.0"
-
+tensorflow-macos = { version = "^2.14.0", platform = "darwin" }
+tensorflow = {extras = ["and-cuda"], version = "^2.14.0", platform = 'linux'}
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-main = "tensorflow_quicksheet:wrapper"
+rnn = "src.rnn:main"
+vae = "src.vae:main"
